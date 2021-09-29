@@ -1,14 +1,21 @@
 import React from "react";
+import PropTypes from "prop-types";
+import TopBar from "./topBar/TopBar";
 
-const Template = (props) => {
-  const { content } = props;
+const Template = ({ topBar = defaultTopBar, content }) => {
   return (
     <div>
-      <div>Header</div>
+      {topBar}
       <div>{content}</div>
       <div>Footer</div>
     </div>
   );
+};
+
+const defaultTopBar = <TopBar />;
+
+Template.propTypes = {
+  content: PropTypes.object,
 };
 
 export default Template;
