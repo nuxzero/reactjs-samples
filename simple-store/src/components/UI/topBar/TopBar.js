@@ -1,17 +1,26 @@
 import React from "react";
 import styled from "styled-components";
+import Box from "../Box";
 import TopBarItem from "./TopBarItem";
+import logo from "../../../logo.png";
 
 const TopBar = () => {
   return (
-    <div>
-      <TopBarLogoContainer>Top bar</TopBarLogoContainer>
+    <Box marginTop={56} marginLeft={104} marginBottom={56} marginRight={104}>
+      <TopBarLogoContainer>
+        <LogoImage src={logo} alt="logo" />
+        <Box marginLeft={10}>
+          <p>cultured kid.</p>
+        </Box>
+      </TopBarLogoContainer>
       <TopBarItemsContainer>
         {items.map((e) => (
-          <TopBarItem title={e.title} linkTo={e.linkTo} />
+          <Box marginLeft={24}>
+            <TopBarItem title={e.title} linkTo={e.linkTo} />
+          </Box>
         ))}
       </TopBarItemsContainer>
-    </div>
+    </Box>
   );
 };
 
@@ -34,12 +43,18 @@ const items = [
   },
 ];
 
+const LogoImage = styled.img`
+  width: 20px;
+  height: 100%;
+`;
+
 const TopBarLogoContainer = styled.div`
   display: inline-flex;
+  align-items: center;
 `;
 
 const TopBarItemsContainer = styled.div`
-  display: inline-flex;
+  display: flex;
   float: right;
 `;
 

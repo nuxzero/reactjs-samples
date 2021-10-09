@@ -17,8 +17,6 @@ TopBarItem.propTypes = {
 
 const Container = styled.li`
   list-style-type: none;
-  padding: 8px;
-  margin: 0;
 `;
 
 export default TopBarItem;

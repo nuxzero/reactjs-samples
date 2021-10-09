@@ -8,7 +8,7 @@ const ProductItem = ({ product }) => {
   const { title, subtitle, shortDescription, image } = product;
   return (
     <Container>
-      <img src={image} alt={image} />
+      <ProductImage src={image} alt={image} />
       <Title>{title}</Title>
       <Subtitle>{subtitle}</Subtitle>
       <Caption>{shortDescription}</Caption>
@@ -19,6 +19,10 @@ const ProductItem = ({ product }) => {
 const Container = styled.div`
   background: #ffffff;
   font-weight: ${Fonts.bold};
+`;
+
+const ProductImage = styled.img`
+  width: 240px;
 `;
 
 const Title = styled.div`
