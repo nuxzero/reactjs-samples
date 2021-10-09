@@ -1,5 +1,10 @@
 # Getting Started with Create React App
 
+![](screenshot.png)
+
+## Reference
+https://www.figma.com/community/file/947671983918628823
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
